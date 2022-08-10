@@ -1,0 +1,8 @@
+{
+  "name": "reecerepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Reece Giles",
+  "license": "MIT",
+  "private": false
+}
