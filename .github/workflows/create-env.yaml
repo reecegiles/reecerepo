@@ -3,6 +3,9 @@ name: 'Create env'
 on:
   pull_request:
     branches: ['ft/**']
+  push:
+    branches:
+      - 'ft/**'
 
 jobs:
   build:
