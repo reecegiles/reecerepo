@@ -21,7 +21,7 @@ jobs:
 
       - name: Get ENV ID
         run: |
-          echo "TF_VAR_env=$(echo $GITHUB_REF_NAME | cut -d / -f 3 | cut -d - -f1-2)" >> $GITHUB_ENV
+          echo "TF_VAR_env=$(echo $GITHUB_REF_NAME | cut -d / -f 2 | cut -d - -f1-2)" >> $GITHUB_ENV
           echo $GITHUB_ENV
       #- name: Configure AWS
       # Insert action here for that
