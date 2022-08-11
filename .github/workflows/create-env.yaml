@@ -1,0 +1,41 @@
+---
+name: "Create TESLA instance"
+
+on:
+  pull_request:
+    branches:
+      - 'ft/**'
+  push:
+    branches:
+      - 'ft/**'
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+
+      - name: Setup terraform
+        uses: hashicorp/setup-terraform@v2.0.0
+
+      - name: Get ENV ID
+        run: |
+          echo "TF_VAR_env=$(echo $GITHUB_REF_NAME | cut -d / -f 2 | cut -d - -f1-2)" >> $GITHUB_ENV
+          echo $GITHUB_ENV
+      #- name: Configure AWS
+      # Insert action here for that
+
+      #      - name: Terraform Init
+      #        id: init
+      #        working-directory: $TERRAFORM_DIR
+      #        run: terraform init
+
+#      - name: Terraform validate
+#        id: validate
+#        working-directory: $TERRAFORM_DIR
+#        run: terraform validate
+
+      - name: Print env
+        id: env
+        run: env

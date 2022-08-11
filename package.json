@@ -4,5 +4,8 @@
   "main": "index.js",
   "author": "Reece Giles",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
