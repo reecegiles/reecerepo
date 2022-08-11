@@ -34,10 +34,10 @@ jobs:
       #        working-directory: $TERRAFORM_DIR
       #        run: terraform init
 
-      - name: Terraform validate
-        id: validate
-        working-directory: $TERRAFORM_DIR
-        run: terraform validate
+#      - name: Terraform validate
+#        id: validate
+#        working-directory: $TERRAFORM_DIR
+#        run: terraform validate
 
       - name: Print env
         id: env
