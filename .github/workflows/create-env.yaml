@@ -16,3 +16,6 @@ jobs:
 
       - name: NPM install
         run: npm install
+
+      - name: env
+        run: env
